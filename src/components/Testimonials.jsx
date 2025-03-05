@@ -69,13 +69,13 @@ const Testimonials = () => {
         {/* Arrow Buttons for medium and above screens*/}
         <div className="hidden md:flex justify-center items-center space-x-6">
           <button
-            className="text-white border border-white hover:border-none rounded-full p-3 hover:bg-blue-700"
+            className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
             onClick={handlePrev}
           >
             ←
           </button>
           <button
-            className="text-white border border-white hover:border-none rounded-full p-3 hover:bg-blue-700"
+            className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
             onClick={handleNext}
           >
             →
@@ -84,7 +84,7 @@ const Testimonials = () => {
       </div>
 
       {/* Testimonial Display (3 per row) */}
-      <div className="w-[90%] my-8 grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+      <div className="w-[90%] my-8 grid grid-cols-1 lg:grid-cols-3 gap-6 mb-[80px]">
         {testimonials.slice(activeIndex, activeIndex + 3).map((testimonial) => (
           <div
             key={testimonial.id}
@@ -110,13 +110,13 @@ const Testimonials = () => {
       {/* Arrow Buttons for small to med screen */}
       <div className="md:hidden flex space-x-6">
         <button
-          className="text-white border border-white hover:border-none rounded-full p-3 hover:bg-blue-700"
+          className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
           onClick={handlePrev}
         >
           ←
         </button>
         <button
-          className="text-white border border-white hover:border-none rounded-full p-3 hover:bg-blue-700"
+          className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
           onClick={handleNext}
         >
           →

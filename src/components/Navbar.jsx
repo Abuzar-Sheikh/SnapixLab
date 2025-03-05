@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="hidden sm:flex items-center gap-6">
           <Link to="/contact" className="relative">
             <button className="bg-blue-700 hover:rounded-br-[0px] text-white px-6 py-2 rounded-br-[20px] transition-all">
-              Contact Us
+              Book a Call
             </button>
           </Link>
         </div>

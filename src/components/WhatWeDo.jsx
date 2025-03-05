@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WhatWeDo_img from "../assets/WhatWeDo_img.jpeg";
+import dropdown_icon from "../assets/dropdown_icon.svg";
 
 // Array of service topics and descriptions
 const services = [
@@ -66,8 +67,8 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="my-[40px] md:my-[80px] flex items-center justify-center text-white flex-col border-b">
-      <div className="px-[40px] md:px-[80px] w-full flex md:flex-row flex-col items-center gap-2">
+    <div className="flex items-center justify-center text-white flex-col my-[40px] px-[40px] md:my-[80px] md:px-[80px] border-b">
+      <div className="w-[100%] flex md:flex-row flex-col items-center gap-2">
         <h2 className="text-4xl md:text-6xl w-full md:w-2/3">What We Do?</h2>
         <p className="text-lg w-full md:w-3/6">
           We offer a range of professional design and development services
@@ -75,12 +76,12 @@ const WhatWeDo = () => {
         </p>
       </div>
 
-      <div className="flex w-[90%] flex-col md:flex-row justify-between my-8">
+      <div className="flex w-[100%] flex-col md:flex-row justify-between md:mt-[40px] md:mb-[80px] gap-10 mb-[40px]">
         {/* Left Section - Image */}
-        <div className="w-full md:w-1/2 flex items-center justify-center">
-          <div className="relative w-full md:w-[90%] h-auto w-full">
+        <div className="w-full md:w-1/2 flex items-center justify-center mt-[40px]">
+          <div className="relative w-full md:w-[100%] h-auto w-full">
             <img
-              src={WhatWeDo_img} // Replace with actual image path
+              src={WhatWeDo_img}
               alt="What We Do Mockup"
               className="rounded-lg h-full object-cover"
             />
@@ -88,18 +89,20 @@ const WhatWeDo = () => {
         </div>
 
         {/* Right Section - Text */}
-        <div className="w-full px-[40px] py-[40px] md:py-[80px] md:w-1/2">
-          <ul className="flex flex-col sm:space-y-2 md:space-y-5 lg:space-y-9">
+        <div className="w-[100%] md:w-1/2 my-[40px]">
+          <ul className="flex flex-col space-y-2 sm:space-y-3 md:space-y-5 lg:space-y-10">
             {services.map((service) => (
               <li key={service.id}>
                 <div className="flex justify-between items-center">
                   <h3 className="text-xl text-white">{service.title}</h3>
-                  <button
+                  <img
                     onClick={() => toggleDropdown(service.id)}
-                    className="text-gray-600 hover:text-white focus:outline-none"
-                  >
-                    {openDropdown === service.id ? "🔼" : "🔽"}
-                  </button>
+                    src={dropdown_icon}
+                    alt="Toggle Icon"
+                    className={`w-4 h-4 cursor-pointer transition-transform duration-300 ${
+                      openDropdown === service.id ? "rotate-180" : ""
+                    }`}
+                  />
                 </div>
                 {/* Dropdown content */}
                 {openDropdown === service.id && (

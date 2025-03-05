@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import research from "../assets/research.png";
-import branding from "../assets/branding.png";
-import uxui from "../assets/uxui.png";
-import devAndBuild from "../assets/devAndBuild.png";
-import marketting from "../assets/marketting.png";
-import launch from "../assets/launch.png";
+import research from "../assets/research.svg";
+import branding from "../assets/branding.svg";
+import uxui from "../assets/uxui.svg";
+import developement from "../assets/developement.svg";
+import marketting from "../assets/marketting.svg";
+import launch from "../assets/launch.svg";
 
 const processes = [
   {
@@ -12,51 +12,51 @@ const processes = [
     title: "Research & Strategy",
     description:
       "We dive deep into your industry, analyze competitors, and understand your audience to create a solid game plan tailored for success.",
-    img: research,
+    svg: research,
   },
   {
     id: 2,
     title: "Branding & Identity",
     description:
       "A strong brand leaves a lasting impact. We craft unique brand identities, ensuring consistency across every touchpoint.",
-    img: branding,
+    svg: branding,
   },
   {
     id: 3,
     title: "UI/UX Design",
     description:
       "User experience matters. Our intuitive and visually stunning designs turn ideas into engaging digital products that people love.",
-    img: uxui,
+    svg: uxui,
   },
   {
     id: 4,
     title: "Development & Build",
     description:
       "From websites to mobile apps, we develop high-performance, scalable solutions with seamless functionality across all devices.",
-    img: devAndBuild,
+    svg: developement,
   },
   {
     id: 5,
     title: "Marketing & Growth",
     description:
       "Launching is just the beginning. We execute powerful marketing strategies to drive traffic, increase engagement, and scale your brand.",
-    img: marketting,
+    svg: marketting,
   },
   {
     id: 6,
     title: "Launch & Beyond",
     description:
       "Your success is our priority. We ensure a smooth launch and provide ongoing support to help your business grow effortlessly.",
-    img: launch,
+    svg: launch,
   },
 ];
 
 const HowWeWork = () => {
-  const [selectedProcess, setSelectedProcess] = useState(1); // First card is selected by default
+  const [selectedProcess, setSelectedProcess] = useState();
 
   return (
-    <section className="my-[40px] bg-black text-white flex flex-col justify-center items-center border-b">
-      <div className="px-[40px] md:px-[80px] w-full flex md:flex-row flex-col items-center gap-2">
+    <section className="my-[40px] px-[40px] md:my-[80px] md:px-[80px] border-b bg-black text-white flex flex-col justify-center items-center">
+      <div className="w-full flex md:flex-row flex-col items-center gap-2 mb-4">
         <h2 className="text-4xl md:text-6xl w-full md:w-2/3">How We Work</h2>
         <p className="text-lg text-left w-full md:w-3/6">
           Whether it's a full-scale project or a single service, we ensure a
@@ -65,23 +65,30 @@ const HowWeWork = () => {
       </div>
 
       {/* Process Steps Grid */}
-      <div className="my-8 w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="w-[100%] mb-[40px] md:mb-[80px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {processes.map((process) => (
           <div
             key={process.id}
-            className={`p-6 rounded-lg shadow-lg transition duration-300 ease-in-out cursor-pointer
-                ${
-                  selectedProcess === process.id
-                    ? "bg-blue-600 text-white"
-                    : "border border-gray-600 hover:bg-blue-700"
-                }`}
-            onClick={() => setSelectedProcess(process.id)} // Highlight the clicked card
+            className={`p-6 rounded-lg shadow-lg transition duration-300 ease-in-out cursor-pointer group
+          ${
+            selectedProcess === process.id
+              ? "bg-blue-600 text-white"
+              : "border border-gray-600 hover:bg-blue-700"
+          }`}
           >
+            {/* Display SVG icon using <img> tag */}
             <img
-              src={process.img}
+              src={process.svg}
               alt={process.title}
-              className="w-8 mb-4 rounded-lg"
+              className="w-8 h-8 mb-4 transition-all duration-300"
+              style={{
+                filter:
+                  selectedProcess === process.id
+                    ? { svg }
+                    : "invert(2000%) sepia(1000%) saturate(100%) hue-rotate(220deg) brightness(100%) contrast(200%)", // blue-700 effect
+              }}
             />
+
             <h3 className="text-2xl font-semibold mb-2">{process.title}</h3>
             <p className="text-sm text-gray-300">{process.description}</p>
           </div>

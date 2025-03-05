@@ -9,7 +9,10 @@ import behance_logo from "../assets/behance_logo.png";
 const Contact = () => {
   return (
     <div className="my-[80px] flex justify-center items-center p-4">
-      <div className="w-[90%] rounded-3xl bg-cover flex items-center justify-center" style={{ backgroundImage: `url(${bg_form})` }}>
+      <div
+        className="w-[90%] rounded-3xl bg-cover flex items-center justify-center"
+        style={{ backgroundImage: `url(${bg_form})` }}
+      >
         <div className="w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-8 z-100">
           {/* Left Section */}
           <div className="flex flex-col justify-center items-start p-8 rounded-xl">
@@ -23,34 +26,34 @@ const Contact = () => {
           </div>
 
           {/* Right Section - Contact Form */}
-          <div className="lg:p-12  rounded-xl shadow-lg lg:mt-16">
+          <div className="lg:p-12 rounded-xl shadow-xl lg:mt-16 p-4 bg-gray-900/80">
             <form className="space-y-2">
               <input
                 type="text"
                 placeholder="Jane Smith"
-                className="w-full p-4 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-3 px-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
               <input
                 type="email"
                 placeholder="jane@framer.com"
-                className="w-full p-4 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-3 px-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
               <input
                 type="text"
                 placeholder="Budget"
-                className="w-full p-4 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-3 px-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
               <input
                 type="text"
                 placeholder="Logo Design"
-                className="w-full p-4 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-3 px-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
               <textarea
                 placeholder="New Design.."
                 rows="4"
-                className="w-full p-4 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-3 px-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700"
               ></textarea>
-              <button className="mt-4 w-full bg-blue-600 text-white py-4 rounded-br-[20px] hover:rounded-br-[0px] hover:bg-blue-700 transition duration-300  transition-all">
+              <button className="mt-4 w-full bg-blue-700 text-white py-4 rounded-br-[20px] hover:rounded-br-[0px] transition duration-300  transition-all">
                 Submit
               </button>
             </form>

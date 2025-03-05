@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
-    <div className="py-[150px] text-white flex flex-col items-center justify-center border-b">
+    <div className="py-[80px] sm:py-[140px] text-white flex flex-col items-center justify-center border-b">
       {/* Outer container with padding and blue border */}
       <div className="w-[90%] max-w-4xl text-center relative">
         {/* Circle behind the text */}

@@ -1,27 +1,23 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-
-import Navbar from './components/Navbar'
-
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+const Navbar = React.lazy(() => import("./components/Navbar"));
+const Home = React.lazy(() => import("./pages/Home"));
+const About = React.lazy(() => import("./pages/About"));
+const Contact = React.lazy(() => import("./pages/Contact"));
 
 const App = () => {
   return (
     <div>
-      <ToastContainer />
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
-      </Routes>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </React.Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

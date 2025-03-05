@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,18 +6,8 @@ body {
   background-color: black;
 }
 
-* {
-  font-family: OutFit;
-}
-
 a.active hr {
   display: block;
-}
-
-.fustat-regular {
-  font-family: "Fustat", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 @media (max-width: 640px) {
@@ -36,14 +24,16 @@ a.active hr {
 .grid-lines {
   background-image: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.1) 1px,
+      rgba(255, 255, 255, 0.09) 1px,
       transparent 1px
     ),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
-hr {
-  background-color: #fff;
-  color: #fff;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(
+      to top,
+      transparent 60%,
+      rgba(0, 0, 0, 0.7) 80%,
+      black 100%
+    );
+  background-size: 70px 70px;
+  opacity: 0.7;
 }
