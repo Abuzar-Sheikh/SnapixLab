@@ -43,10 +43,10 @@ import ux_2 from "./ux_2.svg";
 import ux_3 from "./ux_3.svg";
 import ux_4 from "./ux_4.svg";
 
-import webDev_1 from "./webDev_1.svg";
-import webDev_2 from "./webDev_2.svg";
-import webDev_3 from "./webDev_3.svg";
-import webDev_4 from "./webDev_4.svg";
+import webdev_1 from "./webdev_1.svg";
+import webdev_2 from "./webdev_2.svg";
+import webdev_3 from "./webdev_3.svg";
+import webdev_4 from "./webdev_4.svg";
 
 const assets = {
   agile_1,
@@ -94,10 +94,10 @@ const assets = {
   ux_3,
   ux_4,
 
-  webDev_1,
-  webDev_2,
-  webDev_3,
-  webDev_4,
-}
+  webdev_1,
+  webdev_2,
+  webdev_3,
+  webdev_4,
+};
 
-export default assets
+export default assets;
