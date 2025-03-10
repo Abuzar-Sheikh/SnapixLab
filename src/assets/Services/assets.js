@@ -54,10 +54,10 @@ const assets = {
   agile_3,
   agile_4,
 
-  appDev_1,
-  appDev_2,
-  appDev_3,
-  appDev_4,
+  appdev_1,
+  appdev_2,
+  appdev_3,
+  appdev_4,
 
   digMar_1,
   digMar_2,
