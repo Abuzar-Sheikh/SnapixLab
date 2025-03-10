@@ -3,10 +3,10 @@ import agile_2 from "./agile_2.svg";
 import agile_3 from "./agile_3.svg";
 import agile_4 from "./agile_4.svg";
 
-import appDev_1 from "./appDev_1.svg";
-import appDev_2 from "./appDev_2.svg";
-import appDev_3 from "./appDev_3.svg";
-import appDev_4 from "./appDev_4.svg";
+import appdev_1 from "./appdev_1.svg";
+import appdev_2 from "./appdev_2.svg";
+import appdev_3 from "./appdev_3.svg";
+import appdev_4 from "./appdev_4.svg";
 
 import digMar_1 from "./digMar_1.svg";
 import digMar_2 from "./digMar_2.svg";
