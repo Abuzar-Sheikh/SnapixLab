@@ -23,10 +23,10 @@ import scoping_2 from "./scoping_2.svg";
 import scoping_3 from "./scoping_3.svg";
 import scoping_4 from "./scoping_4.svg";
 
-import softDev_1 from "./softDev_1.svg";
-import softDev_2 from "./softDev_2.svg";
-import softDev_3 from "./softDev_3.svg";
-import softDev_4 from "./softDev_4.svg";
+import softdev_1 from "./softdev_1.svg";
+import softdev_2 from "./softdev_2.svg";
+import softdev_3 from "./softdev_3.svg";
+import softdev_4 from "./softdev_4.svg";
 
 import testing_1 from "./testing_1.svg";
 import testing_2 from "./testing_2.svg";
@@ -74,10 +74,10 @@ const assets = {
   scoping_3,
   scoping_4,
 
-  softDev_1,
-  softDev_2,
-  softDev_3,
-  softDev_4,
+  softdev_1,
+  softdev_2,
+  softdev_3,
+  softdev_4,
 
   testing_1,
   testing_2,
