@@ -1,15 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import video from "../assets/video.jpg";
-import comp_1 from '../assets/comp_1.png'
-import comp_2 from '../assets/comp_2.png'
-import comp_3 from '../assets/comp_3.png'
-import comp_4 from '../assets/comp_4.png'
-import comp_5 from '../assets/comp_5.png'
-import comp_6 from '../assets/comp_6.png'
-import comp_7 from '../assets/comp_7.png'
-import comp_8 from '../assets/comp_8.png'
-import comp_9 from '../assets/comp_9.png'
+import { assets } from "../../assets/assets";
 
 const Hero = () => {
   return (
@@ -33,23 +24,23 @@ const Hero = () => {
 
       <img
         className="rounded-2xl m-[40px] md:m-[80px] w-[90%] h-auto"
-        src={video}
+        src={assets.video}
         title="Video Title"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-      ></img>
+      />
 
       {/* Logos Section */}
       <div className="grid grid-cols-4 md:grid-cols-8 gap-8 w-[90%] my-[50px]">
-        <img src={comp_1} alt="Logo 1" className="h-8 mx-auto" />
-        <img src={comp_2} alt="Logo 2" className="h-8 mx-auto" />
-        <img src={comp_3} alt="Logo 3" className="h-8 mx-auto" />
-        <img src={comp_4} alt="Logo 4" className="h-8 mx-auto" />
-        <img src={comp_5} alt="Logo 5" className="h-8 mx-auto" />
-        <img src={comp_6} alt="Logo 6" className="h-8 mx-auto" />
-        <img src={comp_7} alt="Logo 7" className="h-8 mx-auto" />
-        <img src={comp_8} alt="Logo 8" className="h-8 mx-auto" />
+        <img src={assets.comp_1} alt="Logo 1" className="h-8 mx-auto" />
+        <img src={assets.comp_2} alt="Logo 2" className="h-8 mx-auto" />
+        <img src={assets.comp_3} alt="Logo 3" className="h-8 mx-auto" />
+        <img src={assets.comp_4} alt="Logo 4" className="h-8 mx-auto" />
+        <img src={assets.comp_5} alt="Logo 5" className="h-8 mx-auto" />
+        <img src={assets.comp_6} alt="Logo 6" className="h-8 mx-auto" />
+        <img src={assets.comp_7} alt="Logo 7" className="h-8 mx-auto" />
+        <img src={assets.comp_8} alt="Logo 8" className="h-8 mx-auto" />
       </div>
     </section>
   );

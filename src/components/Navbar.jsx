@@ -1,28 +1,22 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
-import dropdown_icon from "../assets/dropdown_icon.png";
+import { assets } from "../assets/assets";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
   return (
     <div className="flex items-center justify-center h-[80px] z-500">
-      <div className="flex items-center justify-between w-[90%] py-5 font-medium text-white relative">
+      <div className="flex items-center justify-between w-[95%] py-5 font-medium text-white relative">
         {/* Logo */}
         <Link to="/">
-          <img src={logo} className="w-36" alt="Snapix Lab Logo" />
+          <img src={assets.logo} className="w-36" alt="Snapix Lab Logo" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden sm:flex gap-8 text-md font-normal text-white">
+        <ul className="hidden sm:flex gap-6 text-md font-normal text-white">
           <NavLink to="/" className="flex flex-col items-center gap-1">
             <p>Home</p>
-            <hr className="w-3/4 border-none h-[1.5px] bg-white hidden" />
-          </NavLink>
-
-          <NavLink to="/about" className="flex flex-col items-center gap-1">
-            <p>About</p>
             <hr className="w-3/4 border-none h-[1.5px] bg-white hidden" />
           </NavLink>
 
@@ -33,6 +27,11 @@ const Navbar = () => {
 
           <NavLink to="/portfolio" className="flex flex-col items-center gap-1">
             <p>Portfolio</p>
+            <hr className="w-3/4 border-none h-[1.5px] bg-white hidden" />
+          </NavLink>
+
+          <NavLink to="/contact" className="flex flex-col items-center gap-1">
+            <p>Contact Us</p>
             <hr className="w-3/4 border-none h-[1.5px] bg-white hidden" />
           </NavLink>
         </ul>
@@ -49,7 +48,7 @@ const Navbar = () => {
         {/* Mobile Menu Icon */}
         <div className="sm:hidden">
           <button onClick={() => setVisible(!visible)}>
-            <img src={dropdown_icon} alt="Menu" className="w-2" />
+            <img src={assets.menu} alt="Menu" className="w-6" />
           </button>
         </div>
 
@@ -64,7 +63,11 @@ const Navbar = () => {
             onClick={() => setVisible(false)}
             className="flex items-center cursor-pointer gap-4 p-3 border-b"
           >
-            <img className="h-4 rotate-180" src={dropdown_icon} alt="Close" />
+            <img
+              className="h-4 rotate-180"
+              src={assets.menu_icon}
+              alt="Close"
+            />
             <p>Back</p>
           </div>
 
@@ -80,23 +83,23 @@ const Navbar = () => {
             <NavLink
               onClick={() => setVisible(false)}
               className="py-3 px-4 hover:bg-gray-200 border-b"
-              to="/about"
-            >
-              About
-            </NavLink>
-            <NavLink
-              onClick={() => setVisible(false)}
-              className="py-3 px-4 hover:bg-gray-200 border-b"
               to="/services"
             >
               Services
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-3 px-4 hover:bg-gray-200"
+              className="py-3 px-4 hover:bg-gray-200 border-b"
               to="/portfolio"
             >
               Portfolio
+            </NavLink>
+            <NavLink
+              onClick={() => setVisible(false)}
+              className="py-3 px-4 hover:bg-gray-200"
+              to="/contact"
+            >
+              Contact Us
             </NavLink>
           </div>
         </div>

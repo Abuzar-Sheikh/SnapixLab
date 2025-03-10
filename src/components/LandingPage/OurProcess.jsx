@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import research from "../assets/research.svg";
-import branding from "../assets/branding.svg";
-import uxui from "../assets/uxui.svg";
-import developement from "../assets/developement.svg";
-import marketting from "../assets/marketting.svg";
-import launch from "../assets/launch.svg";
+import { assets } from "../../assets/assets";
 
 const processes = [
   {
@@ -12,42 +7,42 @@ const processes = [
     title: "Research & Strategy",
     description:
       "We dive deep into your industry, analyze competitors, and understand your audience to create a solid game plan tailored for success.",
-    svg: research,
+    svg: assets.research,
   },
   {
     id: 2,
     title: "Branding & Identity",
     description:
       "A strong brand leaves a lasting impact. We craft unique brand identities, ensuring consistency across every touchpoint.",
-    svg: branding,
+    svg: assets.branding,
   },
   {
     id: 3,
     title: "UI/UX Design",
     description:
       "User experience matters. Our intuitive and visually stunning designs turn ideas into engaging digital products that people love.",
-    svg: uxui,
+    svg: assets.uxui,
   },
   {
     id: 4,
     title: "Development & Build",
     description:
       "From websites to mobile apps, we develop high-performance, scalable solutions with seamless functionality across all devices.",
-    svg: developement,
+    svg: assets.developement,
   },
   {
     id: 5,
     title: "Marketing & Growth",
     description:
       "Launching is just the beginning. We execute powerful marketing strategies to drive traffic, increase engagement, and scale your brand.",
-    svg: marketting,
+    svg: assets.marketting,
   },
   {
     id: 6,
     title: "Launch & Beyond",
     description:
       "Your success is our priority. We ensure a smooth launch and provide ongoing support to help your business grow effortlessly.",
-    svg: launch,
+    svg: assets.launch,
   },
 ];
 

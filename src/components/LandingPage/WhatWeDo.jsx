@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import WhatWeDo_img from "../assets/WhatWeDo_img.jpeg";
-import dropdown_icon from "../assets/dropdown_icon.svg";
+import { assets } from "../../assets/assets";
 
 // Array of service topics and descriptions
 const services = [
@@ -81,7 +80,7 @@ const WhatWeDo = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center mt-[40px]">
           <div className="relative w-full md:w-[100%] h-auto w-full">
             <img
-              src={WhatWeDo_img}
+              src={assets.WhatWeDo_img}
               alt="What We Do Mockup"
               className="rounded-lg h-full object-cover"
             />
@@ -97,7 +96,7 @@ const WhatWeDo = () => {
                   <h3 className="text-xl text-white">{service.title}</h3>
                   <img
                     onClick={() => toggleDropdown(service.id)}
-                    src={dropdown_icon}
+                    src={assets.dropdown_icon}
                     alt="Toggle Icon"
                     className={`w-4 h-4 cursor-pointer transition-transform duration-300 ${
                       openDropdown === service.id ? "rotate-180" : ""

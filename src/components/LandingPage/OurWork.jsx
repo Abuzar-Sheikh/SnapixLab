@@ -1,50 +1,5 @@
 import React from "react";
-import img_1 from "../assets/img_1.jpg";
-import img_2 from "../assets/img_2.jpg";
-import img_3 from "../assets/img_3.jpg";
-import img_4 from "../assets/img_4.jpg";
-import img_5 from "../assets/img_5.jpg";
-import img_6 from "../assets/img_6.jpg";
-
-// Array of projects and images with buttons
-// const projects = [
-//   {
-//     id: 1,
-//     title: "Research",
-//     image: img_1,
-//     buttons: ["Research", "Branding"],
-//   },
-//   {
-//     id: 2,
-//     title: "Branding",
-//     image: img_2,
-//     buttons: ["Research", "Branding", "Design"],
-//   },
-//   {
-//     id: 3,
-//     title: "Design",
-//     image: img_3,
-//     buttons: ["Research", "Branding"],
-//   },
-//   {
-//     id: 4,
-//     title: "Development",
-//     image: img_4,
-//     buttons: ["Design", "Development"],
-//   },
-//   {
-//     id: 5,
-//     title: "Marketing",
-//     image: img_5,
-//     buttons: ["Design", "Development"],
-//   },
-//   {
-//     id: 6,
-//     title: "Launch",
-//     image: img_6,
-//     buttons: ["Development", "Launch", "Marketing"],
-//   },
-// ];
+import { assets } from "../../assets/assets";
 
 const OurWorkSpeaks = () => {
   return (
@@ -65,7 +20,7 @@ const OurWorkSpeaks = () => {
           {/* Image 1 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src={img_1}
+              src={assets.img_1}
               alt="Image 1"
               className="w-full h-56 md:h-72 lg:h-80 object-cover"
             />
@@ -82,7 +37,7 @@ const OurWorkSpeaks = () => {
           {/* Image 2 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src={img_2}
+              src={assets.img_2}
               alt="Image 2"
               className="w-full h-56 md:h-72 lg:h-80 object-cover"
             />
@@ -104,7 +59,7 @@ const OurWorkSpeaks = () => {
           {/* Image 3 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src={img_3}
+              src={assets.img_3}
               alt="Image 3"
               className="w-full sm:h-56 md:h-72 lg:h-80 object-cover"
             />
@@ -123,7 +78,7 @@ const OurWorkSpeaks = () => {
           {/* Image 4 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src={img_4}
+              src={assets.img_4}
               alt="Image 4"
               className="w-full h-56 md:h-72 lg:h-80 object-cover"
             />
@@ -142,7 +97,7 @@ const OurWorkSpeaks = () => {
           {/* Image 5 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src={img_5}
+              src={assets.img_5}
               alt="Image 1"
               className="w-full h-56 md:h-72 lg:h-80 object-cover"
             />
@@ -159,7 +114,7 @@ const OurWorkSpeaks = () => {
           {/* Image 6 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src={img_6}
+              src={assets.img_6}
               alt="Image 2"
               className="w-full h-56 md:h-72 lg:h-80 object-cover"
             />
