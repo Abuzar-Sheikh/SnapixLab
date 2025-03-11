@@ -3,7 +3,7 @@ import arrow from "../assets/Portfolio/arrow.svg";
 import ChicBoutique from "../assets/Portfolio/ChicBoutique.jpg";
 import ConnectCRM from "../assets/Portfolio/ConnectCRM.jpg";
 import DreamHome from "../assets/Portfolio/DreamHome.jpg";
-import EduConnect from "../assets/Portfolio/EduConnect.jpg";
+import Educonnect from "../assets/Portfolio/Educonnect.jpg";
 import EventMasters from "../assets/Portfolio/EventMasters.jpg";
 import FitLife from "../assets/Portfolio/FitLife.jpg";
 import HungryBites from "../assets/Portfolio/HungryBites.jpg";
@@ -101,10 +101,10 @@ const Portfolio = () => {
       category: "Educational Platform for Online Learning",
       items: [
         {
-          title: "EduConnect",
+          title: "Educonnect",
           description:
-            "EduConnect sought an educational platform to facilitate online learning. We developed an interactive platform with virtual classrooms, multimedia content, and student progress tracking, providing a seamless and engaging learning experience for students of all ages.",
-          image: EduConnect,
+            "Educonnect sought an educational platform to facilitate online learning. We developed an interactive platform with virtual classrooms, multimedia content, and student progress tracking, providing a seamless and engaging learning experience for students of all ages.",
+          image: Educonnect,
           buttons: ["Research", "Design", "Development"],
         },
       ],
