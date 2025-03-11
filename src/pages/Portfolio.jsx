@@ -153,7 +153,7 @@ const Portfolio = () => {
       <div className="sm:pt-[80px] pt-[20px] mx-[20px] md:mx-[80px] border border-[#262626] border-[0.75px]">
         <div className="sm:px-[40px] px-[20px]">
           <div className="w-full text-4xl font-medium">At SnapixLab</div>
-          <p className="mt-2 font-[#E6E6E6]">
+          <p className="mt-2 text-[#E6E6E6]">
             We have had the privilege of working with a diverse range of clients
             and delivering exceptional digital products that drive success.
           </p>
