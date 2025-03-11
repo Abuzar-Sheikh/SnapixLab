@@ -4,6 +4,7 @@ const Navbar = React.lazy(() => import("./components/Navbar"));
 const LandingPage = React.lazy(() => import("./pages/LandingPage"));
 const Services = React.lazy(() => import("./pages/Services"));
 const Contact = React.lazy(() => import("./pages/Contact"));
+const Portfolio = React.lazy(() => import("./pages/Portfolio"));
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </React.Suspense>
     </div>
