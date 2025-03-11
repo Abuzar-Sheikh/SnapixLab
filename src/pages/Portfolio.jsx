@@ -1,4 +1,6 @@
 import React from "react";
+import CallToAction from "../components/CallToAction";
+import Contact from "../components/Contact";
 import arrow from "../assets/Portfolio/arrow.svg";
 import ChicBoutique from "../assets/Portfolio/ChicBoutique.jpg";
 import ConnectCRM from "../assets/Portfolio/ConnectCRM.jpg";
@@ -167,13 +169,15 @@ const Portfolio = () => {
           <Section key={index} title={section.category} items={section.items} />
         ))}
       </div>
+      <CallToAction />
+      <Contact />
     </section>
   );
 };
 
 const Section = ({ title, items }) => (
   <div className="border border-[#262626] border-[0.75px] hover:bg-gray-900 transition-all duration-300">
-    <h2 className="md:text-lg lg:text-xl font-[#262626] sm:p-[40px] p-[20px] border border-[#262626] border-[0.75px]">
+    <h2 className="md:text-lg lg:text-xl  text-[#98989A] font-medium sm:p-[40px] p-[20px] border border-[#262626] border-[0.75px]">
       {title}
     </h2>
     <div className="p-">
@@ -199,23 +203,23 @@ const Service = ({ title, description, image, buttons }) => (
         className="w-full h-[90%] object-cover rounded-xl"
       />
     </div>
-    <h6 className="mt-4 text-lg font-semibold text-white ">{title}</h6>
+    <h6 className="mt-4 text-lg font-semibold text-white text-[#E6E6E6]">{title}</h6>
     <div className="flex justify-between items-center">
       <div className="flex flex-wrap gap-2 mt-4">
         {buttons.map((button, index) => (
           <button
             key={index}
-            className="bg-[#0f0f0f] border border-gray-600 text-white px-3 py-1 text-sm rounded"
+            className="bg-[#262626] text-[#98989A] px-3 py-1 text-sm rounded"
           >
             {button}
           </button>
         ))}
       </div>
-      <div className="hidden sm:flex hover:translate-x-1 transition-all relative top-2">
+      <div className="hidden sm:flex hover:translate-x-1 transition-all relative top-2 bg-[#262626] p-2 rounded">
         <img src={arrow} alt="arrow icon" className="w-4 h-4" />
       </div>
     </div>
-    <p className="text-[#E6E6E6] mt-2">{description}</p>
+    <p className="text-[#98989A] mt-2">{description}</p>
   </div>
 );
 
