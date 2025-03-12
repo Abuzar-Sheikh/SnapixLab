@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/assets";
 
+import { motion, AnimatePresence } from "framer-motion"; // Import from framer-motion
+
 // Array of service topics and descriptions
 const services = [
   {
@@ -66,19 +68,19 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="flex items-center justify-center text-white flex-col my-[40px] px-[40px] md:my-[80px] md:px-[80px] border-b">
-      <div className="w-[100%] flex md:flex-row flex-col items-center gap-2">
-        <h2 className="text-4xl md:text-6xl w-full md:w-2/3">What We Do?</h2>
-        <p className="text-lg w-full md:w-3/6">
+    <div className="flex items-center justify-center text-white flex-col my-[40px] md:my-[80px] px-[40px] md:px-[80px] border-b">
+      <div className="w-[100%] flex flex-col lg:flex-row items-center gap-6">
+        <h2 className="text-4xl md:text-6xl w-full lg:w-2/5">What We Do?</h2>
+        <p className="text-lg w-full lg:w-3/6">
           We offer a range of professional design and development services
           tailored to meet your business needs.
         </p>
       </div>
 
-      <div className="flex w-[100%] flex-col md:flex-row justify-between md:mt-[40px] md:mb-[80px] gap-10 mb-[40px]">
+      <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-14 my-[40px] mb-[80px]">
         {/* Left Section - Image */}
-        <div className="w-full md:w-1/2 flex items-center justify-center mt-[40px]">
-          <div className="relative w-full md:w-[100%] h-auto w-full">
+        <div className="w-full flex items-center justify-center">
+          <div className="">
             <img
               src={assets.WhatWeDo_img}
               alt="What We Do Mockup"
@@ -88,11 +90,11 @@ const WhatWeDo = () => {
         </div>
 
         {/* Right Section - Text */}
-        <div className="w-[100%] md:w-1/2 my-[40px]">
-          <ul className="flex flex-col space-y-2 sm:space-y-3 md:space-y-5 lg:space-y-10">
+        <div className="flex h-[450px] md:h-auto">
+          <ul className="flex w-full flex-col justify-between">
             {services.map((service) => (
               <li key={service.id}>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center gap-2">
                   <h3 className="text-xl text-white">{service.title}</h3>
                   <img
                     onClick={() => toggleDropdown(service.id)}
@@ -103,10 +105,22 @@ const WhatWeDo = () => {
                     }`}
                   />
                 </div>
-                {/* Dropdown content */}
-                {openDropdown === service.id && (
-                  <p className="text-white mb-2">{service.description}</p>
-                )}
+
+                <AnimatePresence>
+                  {openDropdown === service.id && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="text-white mt-2">{service.description}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                
               </li>
             ))}
           </ul>

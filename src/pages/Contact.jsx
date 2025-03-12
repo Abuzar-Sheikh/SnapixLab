@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
+import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+
 import logo from "../assets/logo.png";
 import linkedin_logo from "../assets/linkedin_logo.png";
 import mail from "../assets/mail.svg";
@@ -265,6 +267,7 @@ const Contact = () => {
           <div className="w-full text-4xl font-medium">
             Frequently asked questions
           </div>
+
           <p className="mt-2 text-[#E6E6E6]">
             Still you have any questions? Contact our Team via
             hello@squareup.com
@@ -291,9 +294,19 @@ const Contact = () => {
                   <img src={add} alt="Icon" className="inline-block" />{" "}
                 </span>
               </div>
-              {activeIndex === index && (
-                <p className="mt-4 text-sm text-[#E6E6E6]">{faq.answer}</p>
-              )}
+              <AnimatePresence>
+                {activeIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="mt-4 text-sm text-[#E6E6E6]">{faq.answer}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

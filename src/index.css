@@ -54,3 +54,13 @@ a.active hr {
   background-size: 70px 70px;
   opacity: 0.7;
 }
+
+.toggle-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.toggle-content.open {
+  height: auto;
+}
