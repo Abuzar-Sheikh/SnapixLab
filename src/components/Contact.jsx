@@ -3,12 +3,12 @@ import { assets } from "../assets/assets";
 
 const Contact = () => {
   return (
-    <div className="my-[80px] flex justify-center items-center p-4 min-h-[80vh]">
+    <div className="my-[20px] sm:my-[40px] flex justify-center items-center p-4">
       <div
-        className="w-[90%] rounded-3xl bg-cover flex items-center justify-center py-20"
+        className="mx-[20x] sm:mx-[40px] rounded-3xl bg-cover flex items-center justify-center py-20"
         style={{ backgroundImage: `url(${assets.bg_form})` }}
       >
-        <div className="w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center items-center z-100">
+        <div className="w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-8 space-y-10 justify-center items-center z-100">
 
           {/* -------------------------------------- Left Side -------------------------------------- */}
           <div className="flex flex-col gap-16 h-[50%] justify-between">
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
 
           {/* --------------------------------------Right Section - Contact Form-------------------------------------- */}
-          <div className="flex flex-col justify-center lg:p-10 p-6 rounded-xl shadow-lg bg-[#262626]/50  backdrop-blur-[10px]">
+          <div className="flex flex-col justify-center p-6 lg:p-10 rounded-xl shadow-lg bg-[#262626]/50 backdrop-blur-[10px]">
             <h2 className="text-2xl text-white mb-6">Contact Us</h2>
             <form className="space-y-4">
               <input

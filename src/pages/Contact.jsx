@@ -230,17 +230,18 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Operating Days and Social Links */}
-        <div className="sm:flex justify-between space-y-5 py-5 items-center px-[20px] lg:mx-[200px] md:p-[60px] md:mx-[100px] border border-[#262626] border-[0.75px]">
-          <div className="flex gap-4 flex items-center">
-            <p>Operating Days</p>
-            <button className="bg-[#262626] text-white px-4 py-2 rounded">
+        <div className="flex flex-col lg:flex-row justify-between py-5 gap-5 items-center px-4 lg:px-[200px] md:px-[60px] border border-[#262626] border-[0.75px]">
+          {/* Operating Days Section */}
+          <div className="flex flex-col sm:flex-row gap-3 items-center text-center justify-center">
+            <p className="text-lg sm:text-base">Operating Days</p>
+            <div className="bg-[#262626] text-white px-4 py-2 rounded">
               Monday to Friday
-            </button>
+            </div>
           </div>
 
-          <div className="flex gap-4 items-center border border-[#262626] border-[0.75px] rounded p-2 px-4">
-            <p>Stay connected</p>
+          {/* Social Media Links Section */}
+          <div className="flex sm:flex-row text-center gap-3 items-center justify-center border border-[#262626] border-[0.75px] rounded p-2 px-4">
+            <p className="text-lg sm:text-base">Stay connected</p>
             <img
               className="w-8 rounded bg-gradient-to-b from-[#242424] to-transparent p-[4px]"
               src={facebook_logo}
@@ -274,7 +275,7 @@ const Contact = () => {
           {faqData.map((faq, index) => (
             <div
               key={faq.id}
-              className="p-[20px] border border-[#333] rounded-md flex flex-col"
+              className="p-[20px] border border-[#333] flex flex-col"
             >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-10">
@@ -301,9 +302,9 @@ const Contact = () => {
       <CallToAction />
 
       <footer className="text-white">
-        <div className="mx-auto grid grid-cols-1 lg:grid-cols-3 border border-[#262626] border-[0.75px] px-[80px] py-[40px] items-center">
+        <div className="mx-auto flex gap-6 justify-between space-y-6 md:space-y-0 border border-[#262626] border-[0.75px] px-[20px] lg:px-[80px] py-[40px] items-center">
           {/* Logo Section */}
-          <div className="flex items-center justify-center lg:justify-start">
+          <div className="flex items-center justify-center md:justify-start">
             <img
               src={logo} // Replace with the actual logo path
               alt="SnapixLab Logo"
@@ -312,8 +313,8 @@ const Contact = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex justify-center">
-            <ul className="flex gap-6">
+          <div className="flex justify-center items-center">
+            <ul className="flex flex-col md:flex-row gap-4 text-center">
               <li>
                 <a href="/" className="hover:text-blue-400">
                   Home
@@ -338,9 +339,9 @@ const Contact = () => {
           </div>
 
           {/* Social Media and Contact Section */}
-          <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-4">
-            <div className="flex gap-4 items-center border border-[#262626] border-[0.75px] rounded p-2 px-4">
-              <p>Stay connected</p>
+          <div className="flex flex-col md:flex-row text-center gap-3 items-center justify-center border border-[#262626] border-[0.75px] rounded p-4">
+            <p className="text-lg sm:text-base">Stay connected</p>
+            <div className="flex gap-2 flex-col sm:flex-row">
               <img
                 className="w-8 rounded bg-gradient-to-b from-[#242424] to-transparent p-[4px]"
                 src={facebook_logo}
@@ -361,8 +362,8 @@ const Contact = () => {
         </div>
 
         {/* Contact Details */}
-        <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 border border-[#262626] border-[0.75px] px-[80px] py-[40px] flex items-center justify-between">
-          <div className="flex gap-6">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-[2fr_1fr] space-y-6 sm:space-y-0 border border-[#262626] border-[0.75px] px-[20px] md:px-[80px] py-[40px] flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center">
             <a
               href="mailto:hello@squareup.com"
               className="flex items-center gap-2 hover:text-gray-400"
@@ -378,7 +379,7 @@ const Contact = () => {
               +91 91813 23 2309
             </a>
           </div>
-          <div className="ml-auto">
+          <div className="m-auto text-center">
             <p className="text-gray-500">
               © 2025 SnapixLab. All rights reserved.
             </p>

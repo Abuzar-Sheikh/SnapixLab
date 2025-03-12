@@ -8,20 +8,20 @@ const Engineering = () => {
       items: [
         {
           title: "Front-End Development (HTML, CSS, JavaScript)",
-          icon: assets.webDev_1,
+          icon: assets.webdev_1,
         },
         {
           title: "Back-End Development (PHP, Python, Ruby)",
-          icon: assets.webDev_2,
+          icon: assets.webdev_2,
         },
         {
           title:
             "Content Management System (CMS) Development (WordPress, Drupal)",
-          icon: assets.webDev_3,
+          icon: assets.webdev_3,
         },
         {
           title: "E-Commerce Platform Development (Magento, Shopify)",
-          icon: assets.webDev_4,
+          icon: assets.webdev_4,
         },
       ],
     },
@@ -30,34 +30,34 @@ const Engineering = () => {
       items: [
         {
           title: "Native iOS and Android App Development",
-          icon: assets.appDev_1,
+          icon: assets.appdev_1,
         },
         {
           title: "Cross-Platform App Development (React Native, Flutter)",
-          icon: assets.appDev_2,
+          icon: assets.appdev_2,
         },
         {
           title: "App Prototyping and UI/UX Design Integration",
-          icon: assets.appDev_3,
+          icon: assets.appdev_3,
         },
         {
           title: "App Testing, Deployment, and Maintenance",
-          icon: assets.appDev_4,
+          icon: assets.appdev_4,
         },
       ],
     },
     {
       category: "Custom Software Development",
       items: [
-        { title: "Enterprise Software Development", icon: assets.softDev_1 },
-        { title: "Custom Web Application Development", icon: assets.softDev_2 },
+        { title: "Enterprise Software Development", icon: assets.softdev_1 },
+        { title: "Custom Web Application Development", icon: assets.softdev_2 },
         {
           title: "Integration with Third-Party APIs and Systems",
-          icon: assets.softDev_3,
+          icon: assets.softdev_3,
         },
         {
           title: "Legacy System Modernization and Migration",
-          icon: assets.softDev_4,
+          icon: assets.softdev_4,
         },
       ],
     },

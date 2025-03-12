@@ -60,7 +60,7 @@ const HowWeWork = () => {
       </div>
 
       {/* Process Steps Grid */}
-      <div className="w-[100%] mb-[40px] md:mb-[80px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mx-[20x] sm:mx-[80x] mb-[40px] md:mb-[80px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {processes.map((process) => (
           <div
             key={process.id}
