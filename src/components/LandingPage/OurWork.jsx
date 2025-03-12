@@ -4,11 +4,11 @@ import { assets } from "../../assets/assets";
 const OurWorkSpeaks = () => {
   return (
     <section className="flex flex-col items-center justify-center my-[40px] px-[40px] md:my-[80px] md:px-[80px] border-b text-white">
-      <div className="w-[100%] flex flex-col mb-[40px]">
-        <h2 className="text-4xl md:text-6xl w-full md:w-2/3">
+      <div className="w-[100%] flex flex-col mb-[40px] gap-6">
+        <h2 className="text-4xl md:text-6xl w-full md:w-4/4">
           Our Work Speaks
         </h2>
-        <p className="text-lg text-left w-full md:w-3/6">
+        <p className="text-lg text-left w-full md:w-5/6">
           Take a look at some of our best projects that showcase our creativity,
           innovation, and attention to detail.
         </p>

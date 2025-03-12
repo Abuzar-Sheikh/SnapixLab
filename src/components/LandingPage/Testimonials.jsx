@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -56,6 +57,12 @@ const Testimonials = () => {
     setActiveIndex((prevIndex) => (prevIndex === 3 ? 0 : prevIndex + 3)); // Wrap around for the next 3 testimonials
   };
 
+  const testimonialVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -100 },
+  };
+
   return (
     <section className="bg-black text-white flex flex-col items-center border-b">
       <div className="flex flex-col md:flex-row w-full justify-between px-[40px] md:px-[80px] gaap-8">
@@ -66,16 +73,15 @@ const Testimonials = () => {
             about working with Our Company.
           </p>
         </div>
-        {/* Arrow Buttons for medium and above screens*/}
         <div className="hidden md:flex justify-center items-center space-x-6">
           <button
-            className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
+            className="text-blue-700 border border-[3px] border-blue-700 text-2xl flex items-center justify-center hover:text-white hover:border-none w-14 h-14 rounded-[50%] hover:bg-blue-700"
             onClick={handlePrev}
           >
             ←
           </button>
           <button
-            className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
+            className="text-blue-700 border border-[3px] border-blue-700 text-2xl flex items-center justify-center hover:text-white hover:border-none w-14 h-14 rounded-[50%] hover:bg-blue-700"
             onClick={handleNext}
           >
             →
@@ -86,9 +92,14 @@ const Testimonials = () => {
       {/* Testimonial Display (3 per row) */}
       <div className="w-[90%] my-8 grid grid-cols-1 lg:grid-cols-3 gap-6 mb-[80px]">
         {testimonials.slice(activeIndex, activeIndex + 3).map((testimonial) => (
-          <div
+          <motion.div
             key={testimonial.id}
-            className="p-6 rounded-lg bg-gray-900 shadow-lg flex flex-col justify-between"
+            variants={testimonialVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            className="p-6 rounded-lg bg-gray-900 shadow-lg flex flex-col justify-between transition-all duration-300 transform"
           >
             <p className="text-gray-300 text-lg mb-4">{testimonial.text}</p>
             <div className="flex flex-col items-center space-y-4"></div>
@@ -103,7 +114,7 @@ const Testimonials = () => {
               </h3>
               <p className="text-sm text-gray-400">{testimonial.role}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 

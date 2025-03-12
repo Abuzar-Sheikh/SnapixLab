@@ -15,7 +15,7 @@ const Hero = () => {
           Hand over your vision to SnapixLab—we research, design, develop, and
           market it to perfection. All-in-one solutions, zero worries.
         </p>
-        <Link to="/#" className="relative">
+        <Link to="/contact" className="relative">
           <button className="bg-blue-700 hover:rounded-br-[0px] text-white px-6 py-3 my-[40px] rounded-br-[20px] transition-all">
             Get Started Now{" "}
           </button>
@@ -32,15 +32,27 @@ const Hero = () => {
       />
 
       {/* Logos Section */}
-      <div className="grid grid-cols-4 md:grid-cols-8 gap-8 w-[90%] my-[50px]">
-        <img src={assets.comp_1} alt="Logo 1" className="h-8 mx-auto" />
-        <img src={assets.comp_2} alt="Logo 2" className="h-8 mx-auto" />
-        <img src={assets.comp_3} alt="Logo 3" className="h-8 mx-auto" />
-        <img src={assets.comp_4} alt="Logo 4" className="h-8 mx-auto" />
-        <img src={assets.comp_5} alt="Logo 5" className="h-8 mx-auto" />
-        <img src={assets.comp_6} alt="Logo 6" className="h-8 mx-auto" />
-        <img src={assets.comp_7} alt="Logo 7" className="h-8 mx-auto" />
-        <img src={assets.comp_8} alt="Logo 8" className="h-8 mx-auto" />
+      <div className="relative overflow-hidden w-full my-[40px]">
+        <div className="flex animate-scroll w-full gap-5">
+          {/* Repeat logos to ensure seamless scrolling */}
+          <img src={assets.comp_1} alt="Logo 1" className="h-8" />
+          <img src={assets.comp_2} alt="Logo 2" className="h-8" />
+          <img src={assets.comp_3} alt="Logo 3" className="h-8" />
+          <img src={assets.comp_4} alt="Logo 4" className="h-8" />
+          <img src={assets.comp_5} alt="Logo 5" className="h-8" />
+          <img src={assets.comp_6} alt="Logo 6" className="h-8" />
+          <img src={assets.comp_7} alt="Logo 7" className="h-8" />
+          <img src={assets.comp_8} alt="Logo 8" className="h-8" />
+          {/* Repeat logos again for seamless looping */}
+          <img src={assets.comp_1} alt="Logo 1" className="h-8" />
+          <img src={assets.comp_2} alt="Logo 2" className="h-8" />
+          <img src={assets.comp_3} alt="Logo 3" className="h-8" />
+          <img src={assets.comp_4} alt="Logo 4" className="h-8" />
+          <img src={assets.comp_5} alt="Logo 5" className="h-8" />
+          <img src={assets.comp_6} alt="Logo 6" className="h-8" />
+          <img src={assets.comp_7} alt="Logo 7" className="h-8" />
+          <img src={assets.comp_8} alt="Logo 8" className="h-8" />
+        </div>
       </div>
     </section>
   );

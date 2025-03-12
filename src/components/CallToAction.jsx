@@ -1,7 +1,8 @@
 import react from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CallToAction = () => {
+  const navigate = useNavigate();
   return (
     <div className="py-[80px] sm:py-[140px] text-white flex flex-col items-center justify-center border-b">
       {/* Outer container with padding and blue border */}
@@ -24,11 +25,12 @@ const CallToAction = () => {
             your goals.
           </p>
           {/* Call to action button */}
-          <Link to="/#">
-            <button className="bg-blue-700 mt-4 hover:rounded-br-[0px] text-white px-6 py-3 rounded-br-[20px] transition-all">
-              Get Started Now
-            </button>
-          </Link>
+          <button
+            onClick={() => navigate("/contact")}
+            className="bg-blue-700 mt-4 hover:rounded-br-[0px] text-white px-6 py-3 rounded-br-[20px] transition-all"
+          >
+            Get Started Now
+          </button>
         </div>
       </div>
     </div>

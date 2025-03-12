@@ -51,9 +51,9 @@ const HowWeWork = () => {
 
   return (
     <section className="my-[40px] px-[40px] md:my-[80px] md:px-[80px] border-b bg-black text-white flex flex-col justify-center items-center">
-      <div className="w-full flex md:flex-row flex-col items-center gap-2 mb-4">
-        <h2 className="text-4xl md:text-6xl w-full md:w-2/3">How We Work</h2>
-        <p className="text-lg text-left w-full md:w-3/6">
+      <div className="w-[100%] flex flex-col mb-[40px] gap-6">
+        <h2 className="text-4xl md:text-6xl w-full md:w-4/4">How We Work </h2>
+        <p className="text-lg text-left w-full md:w-5/6">
           Whether it's a full-scale project or a single service, we ensure a
           smooth, stress-free process tailored to your needs.
         </p>
