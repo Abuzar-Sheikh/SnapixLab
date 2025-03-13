@@ -64,14 +64,14 @@ const Engineering = () => {
     {
       category: "Digital Marketing",
       items: [
-        { title: "Enterprise Software Development", icon: assets.digMar_1 },
-        { title: "Custom Web Application Development", icon: assets.digMar_2 },
+        { title: "SEO (Search Engine Optimization)", icon: assets.digMar_1 },
+        { title: "Social Media Marketing (SMM)", icon: assets.digMar_2 },
         {
-          title: "Integration with Third-Party APIs and Systems",
+          title: " Pay-Per-Click Advertising (PPC)",
           icon: assets.digMar_3,
         },
         {
-          title: "Legacy System Modernization and Migration",
+          title: "Content Marketing",
           icon: assets.digMar_4,
         },
       ],
@@ -86,9 +86,11 @@ const Engineering = () => {
           <div className="w-full text-4xl font-medium">Engineering</div>
           <p className="mt-2 font-[#E6E6E6]">
             Our engineering team combines technical expertise with a passion for
-            innovation to build robust and scalable digital solutions.
+            innovation to build robust and scalable digital solutions. We
+            leverage the latest technologies and best practices to deliver
+            high-performance applications tailored to your specific needs.
           </p>
-          <div className="sm:my-[40px] my-[20px] w-[230px] px-4 py-2 bg-[#262626] rounded text-white">
+          <div className="sm:my-[40px] my-[20px] w-[270px] px-4 py-2 bg-[#262626] rounded text-white">
             Our engineering services include:
           </div>
         </div>

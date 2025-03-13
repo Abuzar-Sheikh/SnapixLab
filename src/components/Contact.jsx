@@ -25,19 +25,19 @@ const Contact = () => {
 
             {/* Social Media Icons */}
             <div className="hidden md:flex space-x-4">
-              <a href="#">
+              <a href="https://www.instagram.com/snapixlab?igsh=MWJwdWNvNzBvMjFzMA==">
                 <img className="w-6" src={assets.instagram_logo} alt="" />
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/company/snapix-lab/">
                 <img className="w-6" src={assets.linkedin_logo} alt="" />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/share/151JkB4fwo/">
                 <img className="w-6" src={assets.facebook_logo} alt="" />
               </a>
-              <a href="#">
+              <a href="https://www.behance.net/snapixlab">
                 <img className="w-6" src={assets.behance_logo} alt="" />
               </a>
-              <a href="#">
+              <a href="https://wa.me/923404816832">
                 <img className="w-6" src={assets.whatsapp_logo} alt="" />
               </a>
             </div>

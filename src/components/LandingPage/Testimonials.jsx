@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { assets } from "../../assets/assets";
 
 const testimonials = [
   {
@@ -94,16 +95,16 @@ const Testimonials = () => {
         </div>
         <div className="hidden md:flex justify-center items-center space-x-6">
           <button
-            className="text-blue-700 border border-[3px] border-blue-700 text-2xl flex items-center justify-center hover:text-white hover:border-none w-14 h-14 rounded-[50%] hover:bg-blue-700"
+            className="text-blue-700 border border-[3px] border-blue-700 text-2xl flex items-center justify-center hover:text-white hover:border-none w-14 h-14 rounded-[50%] hover:bg-white transition-all rotate-180"
             onClick={handlePrev}
           >
-            ←
+            <img src={assets.arrow_icon} alt="" />
           </button>
           <button
-            className="text-blue-700 border border-[3px] border-blue-700 text-2xl flex items-center justify-center hover:text-white hover:border-none w-14 h-14 rounded-[50%] hover:bg-blue-700"
+            className="text-blue-700 border border-[3px] border-blue-700 text-2xl flex items-center justify-center hover:text-white hover:border-none w-14 h-14 rounded-[50%] hover:bg-white transition-all"
             onClick={handleNext}
           >
-            →
+            <img src={assets.arrow_icon} alt="" />
           </button>
         </div>
       </div>
@@ -139,16 +140,16 @@ const Testimonials = () => {
       {/* Arrow Buttons for small to med screen */}
       <div className="md:hidden flex space-x-6">
         <button
-          className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
+          className="text-blue-700 border border-[3px] flex items-center justify-center border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-white transition-all rotate-180"
           onClick={handlePrev}
         >
-          ←
+          <img src={assets.arrow_icon} alt="" />
         </button>
         <button
-          className="text-blue-700 border border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-blue-700"
+          className="text-blue-700 border border-[3px] flex items-center justify-center border-blue-700 hover:text-white hover:border-none w-14 h-14 rounded-[50%] p-3 hover:bg-white"
           onClick={handleNext}
         >
-          →
+          <img src={assets.arrow_icon} alt="" />
         </button>
       </div>
 

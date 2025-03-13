@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+const Footer = React.lazy(() => import("./components/Footer"));
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const LandingPage = React.lazy(() => import("./pages/LandingPage"));
 const Services = React.lazy(() => import("./pages/Services"));
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
+        <Footer />
       </React.Suspense>
     </div>
   );

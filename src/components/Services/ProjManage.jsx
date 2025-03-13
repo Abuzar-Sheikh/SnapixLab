@@ -61,7 +61,7 @@ const ProjManage = () => {
             are delivered on time, within budget, and according to your
             specifications.
           </p>
-          <div className="sm:my-[40px] my-[20px] w-[230px] px-4 py-2 bg-[#262626] rounded text-white">
+          <div className="sm:my-[40px] my-[20px] w-[280px] text-sm px-2 py-2 bg-[#262626] rounded text-white">
             Our project management services include:
           </div>
         </div>

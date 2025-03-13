@@ -2,6 +2,18 @@ import react from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const CallToAction = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleClick = () => {
+    scrollToTop();
+    navigate("/contact");
+  };
+
   const navigate = useNavigate();
   return (
     <div className="py-[80px] sm:py-[140px] text-white flex flex-col items-center justify-center border-b">
@@ -26,7 +38,7 @@ const CallToAction = () => {
           </p>
           {/* Call to action button */}
           <button
-            onClick={() => navigate("/contact")}
+            onClick={handleClick}
             className="bg-blue-700 mt-4 hover:rounded-br-[0px] text-white px-6 py-3 rounded-br-[20px] transition-all"
           >
             Get Started Now

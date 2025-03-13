@@ -32,7 +32,16 @@ import uxui from "./uxui.svg";
 import video from "./video.jpg";
 import whatsapp_logo from "./whatsapp_logo.png";
 import WhatWeDo_img from "./WhatWeDo_img.jpeg";
-import menu from './menu.png';
+import menu from "./menu.png";
+import arrow_icon from "./arrow_icon.svg";
+import service_1 from "./service_1.jpg";
+import service_2 from "./service_2.jpg";
+import service_3 from "./service_3.jpg";
+import service_4 from "./service_4.jpg";
+import service_5 from "./service_5.jpg";
+import service_6 from "./service_6.jpg";
+import service_7 from "./service_7.jpg";
+import service_8 from "./service_8.jpg";
 
 export const assets = {
   behance_logo,
@@ -70,5 +79,14 @@ export const assets = {
   video,
   whatsapp_logo,
   WhatWeDo_img,
-  menu
+  menu,
+  arrow_icon,
+  service_1,
+  service_2,
+  service_3,
+  service_4,
+  service_5,
+  service_6,
+  service_7,
+  service_8,
 };

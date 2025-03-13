@@ -10,48 +10,56 @@ const services = [
     title: "01. Research & Strategy",
     description:
       "We dive deep into your industry, analyze competitors, and understand your audience to create a solid game plan tailored for success.",
+    image: assets.service_1,
   },
   {
     id: 2,
     title: "02. Branding & Identity",
     description:
       "A strong brand leaves a lasting impact. We craft unique brand identities, ensuring consistency across every touchpoint.",
+    image: assets.service_2,
   },
   {
     id: 3,
     title: "03. UI/UX Design",
     description:
       "User experience matters. Our intuitive and visually stunning designs turn ideas into engaging digital products that people love.",
+    image: assets.service_3,
   },
   {
     id: 4,
     title: "04. Website Development",
     description:
       "Responsive and modern websites that impress, delivering seamless functionality across all devices.",
+    image: assets.service_4,
   },
   {
     id: 5,
     title: "05. Android App Development",
     description:
       "Intuitive, feature-rich mobile applications for Android users, enhancing the mobile experience.",
+    image: assets.service_5,
   },
   {
     id: 6,
     title: "06. Digital Marketing",
     description:
       "We execute powerful marketing strategies to drive traffic, increase engagement, and scale your brand.",
+    image: assets.service_6,
   },
   {
     id: 7,
     title: "07. Personal Assistant Services",
     description:
       "We offer personal assistant services to help you manage tasks and streamline your workflow.",
+    image: assets.service_7,
   },
   {
     id: 8,
     title: "08. Launch & Beyond",
     description:
       "Your success is our priority. We ensure a smooth launch and provide ongoing support to help your business grow effortlessly.",
+    image: assets.service_8,
   },
 ];
 
@@ -82,7 +90,7 @@ const WhatWeDo = () => {
         <div className="w-full flex items-center justify-center">
           <div className="">
             <img
-              src={assets.WhatWeDo_img}
+              src={assets.service_1}
               alt="What We Do Mockup"
               className="rounded-lg h-full object-cover"
             />
@@ -97,7 +105,7 @@ const WhatWeDo = () => {
                 <div className="flex justify-between items-center gap-2">
                   <h3 className="text-xl text-white">{service.title}</h3>
                   <img
-                    onClick={() => toggleDropdown(service.id)}
+                    onClick={() => toggleDropdown(service.id, service.image)}
                     src={assets.dropdown_icon}
                     alt="Toggle Icon"
                     className={`w-4 h-4 cursor-pointer transition-transform duration-300 ${
@@ -119,8 +127,6 @@ const WhatWeDo = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-
-                
               </li>
             ))}
           </ul>
