@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -48,14 +48,29 @@ const testimonials = [
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const handlePrev = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? 3 : prevIndex - 3));
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 3
+    );
   };
 
   const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 3 ? 0 : prevIndex + 3)); // Wrap around for the next 3 testimonials
+    setActiveIndex((prevIndex) =>
+      prevIndex === testimonials.length - 3 ? 0 : prevIndex + 3
+    );
   };
+
+  // Auto-rotate testimonials every 5 seconds
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        handleNext();
+      }, 5000); // Rotate every 5 seconds
+      return () => clearInterval(interval);
+    }
+  }, [activeIndex, isPaused]);
 
   const testimonialVariants = {
     hidden: { opacity: 0, x: 100 },
@@ -64,8 +79,12 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-black text-white flex flex-col items-center border-b">
-      <div className="flex flex-col md:flex-row w-full justify-between px-[40px] md:px-[80px] gaap-8">
+    <section
+      className="bg-black text-white flex flex-col items-center border-b"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div className="flex flex-col md:flex-row w-full justify-between px-[40px] md:px-[80px] gap-8">
         <div className="flex flex-col items-center gap-2">
           <h2 className="text-4xl md:text-6xl w-full">What Our Clients Say?</h2>
           <p className="text-lg w-full mb-4 md:mb-0">
@@ -102,7 +121,6 @@ const Testimonials = () => {
             className="p-6 rounded-lg bg-gray-900 shadow-lg flex flex-col justify-between transition-all duration-300 transform"
           >
             <p className="text-gray-300 text-lg mb-4">{testimonial.text}</p>
-            <div className="flex flex-col items-center space-y-4"></div>
             <img
               src={testimonial.image}
               alt={testimonial.name}
