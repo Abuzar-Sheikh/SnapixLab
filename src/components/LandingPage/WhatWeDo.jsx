@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/assets";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { motion, AnimatePresence } from "framer-motion"; // Import from framer-motion
-
-// Array of service topics and descriptions
 const services = [
   {
     id: 1,
@@ -65,13 +63,14 @@ const services = [
 
 const WhatWeDo = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [currentImage, setCurrentImage] = useState(assets.service_1); // Store the current image
 
-  // Toggle dropdown visibility
-  const toggleDropdown = (id) => {
+  const toggleDropdown = (id, image) => {
     if (openDropdown === id) {
       setOpenDropdown(null); // Close dropdown if already open
     } else {
       setOpenDropdown(id); // Open the clicked dropdown
+      setCurrentImage(image); // Set the current image to the selected service's image
     }
   };
 
@@ -89,11 +88,17 @@ const WhatWeDo = () => {
         {/* Left Section - Image */}
         <div className="w-full flex items-center justify-center">
           <div className="">
-            <img
-              src={assets.service_1}
-              alt="What We Do Mockup"
-              className="rounded-lg h-full object-cover"
-            />
+            <AnimatePresence exitBeforeEnter>
+              <motion.img
+                src={currentImage}
+                alt="What We Do Mockup"
+                className="rounded-lg h-full object-cover"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
           </div>
         </div>
 
