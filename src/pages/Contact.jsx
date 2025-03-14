@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
-import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import { motion, AnimatePresence } from "framer-motion";
 
 import mail from "../assets/mail.svg";
 import phone from "../assets/phone.svg";
@@ -12,7 +12,6 @@ import instagram_logo from "../assets/instagram_logo.png";
 import facebook_logo from "../assets/facebook_logo.png";
 import behance_logo from "../assets/behance_logo.png";
 import whatsapp_logo from "../assets/whatsapp_logo.png";
-import CallToAction from "../components/CallToAction";
 
 const Contact = () => {
   const [budget, setBudget] = useState([1000, 5000]);
@@ -335,8 +334,6 @@ const Contact = () => {
           ))}
         </div>
       </div>
-
-      <CallToAction />
     </div>
   );
 };
