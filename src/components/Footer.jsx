@@ -36,7 +36,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="portflio" className="hover:text-blue-400">
-                Portfolio
+                Projects
               </a>
             </li>
             <li>

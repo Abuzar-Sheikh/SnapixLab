@@ -106,7 +106,11 @@ const Contact = () => {
         </div>
 
         <div className="sm:pt-[80px] pt-[20px] mx-[20px] lg:mx-[200px] pb-[20px] md:p-[60px] border border-[#262626] border-[0.75px]">
-          <form className="space-y-[30px]">
+          <form
+            method="POST"
+            action="https://formspree.io/f/myzekvqo"
+            className="space-y-[30px]"
+          >
             {/* Full Name and Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
               <div className="bg-[#262626] border border-[#98989A]/30 border-[0.75px] rounded px-[30px] py-[18px] gap-[15px]">

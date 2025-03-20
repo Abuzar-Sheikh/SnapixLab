@@ -9,7 +9,6 @@ const Contact = () => {
         style={{ backgroundImage: `url(${assets.bg_form})` }}
       >
         <div className="w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-8 space-y-10 justify-center items-center z-100">
-
           {/* -------------------------------------- Left Side -------------------------------------- */}
           <div className="flex flex-col gap-16 h-[50%] justify-between">
             {/* Left Section */}
@@ -46,7 +45,11 @@ const Contact = () => {
           {/* --------------------------------------Right Section - Contact Form-------------------------------------- */}
           <div className="flex flex-col justify-center p-6 lg:p-10 rounded-xl shadow-lg bg-[#262626]/50 backdrop-blur-[10px]">
             <h2 className="text-2xl text-white mb-6">Contact Us</h2>
-            <form className="space-y-4">
+            <form
+              method="POST"
+              action="https://formspree.io/f/myzekvqo"
+              className="space-y-4"
+            >
               <input
                 type="text"
                 placeholder="Jane Smith"
