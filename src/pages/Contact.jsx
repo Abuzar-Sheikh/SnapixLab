@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
@@ -15,9 +16,49 @@ import whatsapp_logo from "../assets/whatsapp_logo.png";
 
 const Contact = () => {
   const [budget, setBudget] = useState([1000, 5000]);
+  const [formData, setFormData] = useState({
+    designService: false,
+    marketingService: false,
+    developmentService: false,
+    others: false,
+  });
+
+  const navigate = useNavigate();
 
   const handleSliderChange = (values) => {
     setBudget(values);
+  };
+
+  // Handle checkbox change
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: checked,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    // Append the slider values
+    data.append("minBudget", budget[0]);
+    data.append("maxBudget", budget[1]);
+
+    fetch("https://formspree.io/f/myzekvqo", {
+      method: "POST",
+      body: data,
+    })
+      .then((response) => {
+        if (response.ok) {
+          navigate("/thank-you");
+        } else {
+          console.error("Form submission failed");
+        }
+      })
+      .catch((error) => console.error("Error:", error));
   };
 
   const faqData = [
@@ -94,23 +135,19 @@ const Contact = () => {
             className="bg-[#262626] px-6 py-3 rounded-md gap-3 flex items-center justify-center text-[#E6E6E6]"
           >
             <img src={mail} alt="" />
-            hello@squareup.com
+            snapixlab.official@gmail.com
           </a>
           <a
             href=""
             className="bg-[#262626] px-6 py-3 gap-3 rounded-md flex items-center justify-center text-[#E6E6E6]"
           >
             <img src={phone} alt="" />
-            +91 91813 23 2309
+            +923129557718
           </a>
         </div>
 
         <div className="sm:pt-[80px] pt-[20px] mx-[20px] lg:mx-[200px] pb-[20px] md:p-[60px] border border-[#262626] border-[0.75px]">
-          <form
-            action="https://formspree.io/f/myzekvqo"
-            method="POST"
-            className="space-y-[30px]"
-          >
+          <form onSubmit={handleSubmit} className="space-y-[30px]">
             {/* Full Name and Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
               <div className="bg-[#262626] border border-[#98989A]/30 border-[0.75px] rounded px-[30px] py-[18px] gap-[15px]">
@@ -145,25 +182,31 @@ const Contact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
                 <label className="flex items-center space-x-3">
                   <input
-                    name="design service"
+                    name="designService"
                     type="checkbox"
-                    className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
+                    checked={formData.designService}
+                    onChange={handleCheckboxChange}
+                    className="w-[20px] h-[20px] bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
                   <span className="text-white">Design Service</span>
                 </label>
                 <label className="flex items-center space-x-3">
                   <input
-                    name="marketting service"
+                    name="marketingService"
                     type="checkbox"
-                    className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
+                    checked={formData.marketingService}
+                    onChange={handleCheckboxChange}
+                    className="w-[20px] h-[20px] bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
                   <span className="text-white">Marketing Services</span>
                 </label>
                 <label className="flex items-center space-x-3">
                   <input
-                    name="developement service"
+                    name="developmentService"
                     type="checkbox"
-                    className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
+                    checked={formData.developmentService}
+                    onChange={handleCheckboxChange}
+                    className="w-[20px] h-[20px] bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
                   <span className="text-white">Development Services</span>
                 </label>
@@ -171,7 +214,9 @@ const Contact = () => {
                   <input
                     name="others"
                     type="checkbox"
-                    className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
+                    checked={formData.others}
+                    onChange={handleCheckboxChange}
+                    className="w-[20px] h-[20px] bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
                   <span className="text-white">Others</span>
                 </label>
@@ -181,7 +226,7 @@ const Contact = () => {
             {/* Budget Section */}
             <div className="bg-[#262626] border border-[#98989A]/30 border-[0.75px] rounded p-[30px] space-y-[10px]">
               <div className="block mb-2 font-medium text-[16px] text-sm text-white">
-                Your Budget{" "}
+                Your Budget
               </div>
               <p className="text-gray-400 pb-[30px]">
                 Slide to indicate your budget range
