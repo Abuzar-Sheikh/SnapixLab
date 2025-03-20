@@ -227,6 +227,7 @@ const Contact = () => {
                 Message
               </label>
               <input
+                name="message"
                 type="text"
                 placeholder="Type here"
                 className="w-full py-3 rounded-md border-[#98989A]/30 border-b-[0.75px] bg-transparent text-[#656567] text-[13.5px] outline-none"
