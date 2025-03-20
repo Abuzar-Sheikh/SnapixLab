@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      {/* then this component (Hero.jsx) starts rendering found in components directory and then below */}
       <WhatWeDo />
       <OurWork />
       <OurProcess />

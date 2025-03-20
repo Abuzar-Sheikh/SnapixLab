@@ -29,7 +29,6 @@ import menu_icon from "./menu_icon.png";
 import profile_icon from "./profile_icon.png";
 import research from "./research.svg";
 import uxui from "./uxui.svg";
-import video from "./video.jpg";
 import whatsapp_logo from "./whatsapp_logo.png";
 import WhatWeDo_img from "./WhatWeDo_img.jpeg";
 import menu from "./menu.png";
@@ -76,7 +75,6 @@ export const assets = {
   profile_icon,
   research,
   uxui,
-  video,
   whatsapp_logo,
   WhatWeDo_img,
   menu,

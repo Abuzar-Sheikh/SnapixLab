@@ -57,9 +57,9 @@ const Design = () => {
           Services We Offer
         </h2>
         <p className="sm:w-[60%] text-center font-[18px]">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab magni
-          sapiente ducimus aliquam iusto quam quidem accusamus aperiam vitae
-          quasi.
+          We provide design, engineering, and project management solutions to
+          help businesses grow. From UI/UX to web and app development, we create
+          seamless digital experiences aligned with your brand.
         </p>
       </div>
 
@@ -68,9 +68,10 @@ const Design = () => {
         <div className="sm:px-[40px] px-[20px]">
           <div className="w-full text-4xl font-medium">Design</div>
           <p className="mt-2 font-[#E6E6E6]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae modi
-            dicta, voluptatem impedit veritatis necessitatibus sit, delectus
-            laudantium, dignissimos perspiciatis adipisci quia vel hic dolorem
+            Our design services focus on creating user-centered experiences that
+            are visually appealing, intuitive, and engaging. We blend creativity
+            with strategy to deliver impactful solutions for web, mobile, and
+            branding.
           </p>
           <div className="sm:my-[40px] my-[20px] w-[230px] px-4 py-2 bg-[#262626] rounded text-white">
             Our design services include:

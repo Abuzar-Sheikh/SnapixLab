@@ -26,7 +26,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink to="/portfolio" className="flex flex-col items-center gap-1">
-            <p>Portfolio</p>
+            <p>Projects</p>
             <hr className="w-3/4 border-none h-[1.5px] bg-white hidden" />
           </NavLink>
 
@@ -92,7 +92,7 @@ const Navbar = () => {
               className="py-3 px-4 hover:bg-gray-200 border-b"
               to="/portfolio"
             >
-              Portfolio
+              Projects
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}

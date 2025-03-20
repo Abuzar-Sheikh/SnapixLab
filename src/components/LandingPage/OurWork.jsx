@@ -1,7 +1,20 @@
 import React from "react";
 import { assets } from "../../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 const OurWorkSpeaks = () => {
+  const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleClick = () => {
+    scrollToTop();
+    navigate("/projects");
+  };
   return (
     <section className="flex flex-col items-center justify-center my-[40px] px-[40px] md:my-[80px] md:px-[80px] border-b text-white">
       <div className="w-[100%] flex flex-col mb-[40px] gap-6">
@@ -20,9 +33,10 @@ const OurWorkSpeaks = () => {
           {/* Image 1 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
+              onClick={handleClick}
               src={assets.img_1}
               alt="Image 1"
-              className="w-full h-56 md:h-72 lg:h-80 object-cover"
+              className="w-full h-56 md:h-72 lg:h-80 object-cover cursor-pointer"
             />
             <div className="absolute bottom-0 left-0 right-0 py-4 px-1 flex space-x-2 flex flex-col gap-1 sm:flex-row">
               <button className="text-xs bg-gray-700 hover:bg-blue-700 duration-300 transition-all text-white px-3 py-2 rounded-md">
@@ -37,9 +51,10 @@ const OurWorkSpeaks = () => {
           {/* Image 2 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
+              onClick={handleClick}
               src={assets.img_2}
               alt="Image 2"
-              className="w-full h-56 md:h-72 lg:h-80 object-cover"
+              className="w-full h-56 md:h-72 lg:h-80 object-cover cursor-pointer"
             />
             <div className="absolute bottom-0 left-0 right-0 py-4 px-1 flex space-x-2 flex flex-col gap-1 sm:flex-row">
               <button className="hidden md:flex text-xs bg-gray-700 hover:bg-blue-700 duration-300 transition-all text-white px-3 py-2 rounded-md">
@@ -59,9 +74,10 @@ const OurWorkSpeaks = () => {
           {/* Image 3 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
+              onClick={handleClick}
               src={assets.img_3}
               alt="Image 3"
-              className="w-full sm:h-56 md:h-72 lg:h-80 object-cover"
+              className="w-full sm:h-56 md:h-72 lg:h-80 object-cover  cursor-pointer"
             />
             <div className="absolute bottom-0 left-0 right-0 py-4 px-1 flex space-x-2 flex flex-col gap-1 sm:flex-row">
               <button className="hidden md:flex text-xs bg-gray-700 hover:bg-blue-700 duration-300 transition-all text-white px-3 py-2 rounded-md">
@@ -78,9 +94,10 @@ const OurWorkSpeaks = () => {
           {/* Image 4 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
+              onClick={handleClick}
               src={assets.img_4}
               alt="Image 4"
-              className="w-full h-56 md:h-72 lg:h-80 object-cover"
+              className="w-full h-56 md:h-72 lg:h-80 object-cover  cursor-pointer"
             />
             <div className="absolute bottom-0 left-0 right-0 py-4 px-1 flex space-x-2 flex flex-col gap-1 sm:flex-row">
               <button className="text-xs bg-gray-700 hover:bg-blue-700 duration-300 transition-all text-white px-3 py-2 rounded-md">
@@ -97,9 +114,10 @@ const OurWorkSpeaks = () => {
           {/* Image 5 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
+              onClick={handleClick}
               src={assets.img_5}
               alt="Image 1"
-              className="w-full h-56 md:h-72 lg:h-80 object-cover"
+              className="w-full h-56 md:h-72 lg:h-80 object-cover  cursor-pointer"
             />
             <div className="absolute bottom-0 left-0 right-0 py-4 px-1 flex space-x-2 flex flex-col gap-1 sm:flex-row">
               <button className="text-xs bg-gray-700 hover:bg-blue-700 duration-300 transition-all text-white px-3 py-2 rounded-md">
@@ -114,9 +132,10 @@ const OurWorkSpeaks = () => {
           {/* Image 6 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
+              onClick={handleClick}
               src={assets.img_6}
               alt="Image 2"
-              className="w-full h-56 md:h-72 lg:h-80 object-cover"
+              className="w-full h-56 md:h-72 lg:h-80 object-cover  cursor-pointer"
             />
             <div className="absolute bottom-0 left-0 right-0 py-4 px-1 flex space-x-2 flex flex-col gap-1 sm:flex-row">
               <button className="hidden md:flex text-xs bg-gray-700 hover:bg-blue-700 duration-300 transition-all text-white px-3 py-2 rounded-md">

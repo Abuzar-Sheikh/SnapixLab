@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="my-[20px] sm:my-[40px] flex justify-center items-center p-4">
       <div
-        className="mx-[20x] sm:mx-[40px] rounded-3xl bg-cover flex items-center justify-center py-20"
+        className="mx-[20x] sm:mx-[40px] rounded-3xl bg-cover flex items-center justify-center sm:py-20"
         style={{ backgroundImage: `url(${assets.bg_form})` }}
       >
         <div className="w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-8 space-y-10 justify-center items-center z-100">
@@ -24,7 +24,7 @@ const Contact = () => {
             </div>
 
             {/* Social Media Icons */}
-            <div className="hidden md:flex space-x-4">
+            {/* <div className="hidden md:flex space-x-4">
               <a href="https://www.instagram.com/snapixlab?igsh=MWJwdWNvNzBvMjFzMA==">
                 <img className="w-6" src={assets.instagram_logo} alt="" />
               </a>
@@ -40,7 +40,7 @@ const Contact = () => {
               <a href="https://wa.me/923404816832">
                 <img className="w-6" src={assets.whatsapp_logo} alt="" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* --------------------------------------Right Section - Contact Form-------------------------------------- */}
@@ -65,7 +65,7 @@ const Contact = () => {
                 />
                 <input
                   type="text"
-                  placeholder="Logo Design"
+                  placeholder="Services"
                   className="w-1/2 py-3 px-4 bg-[#BBBBBB]/15 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
               </div>
@@ -81,7 +81,7 @@ const Contact = () => {
           </div>
 
           {/* -------------------------------------- Social Media icons for Sm Screens -------------------------------------- */}
-          <div className="flex md:hidden space-x-4">
+          {/* <div className="flex md:hidden space-x-4">
             <a href="#">
               <img className="w-6" src={assets.instagram_logo} alt="" />
             </a>
@@ -97,7 +97,7 @@ const Contact = () => {
             <a href="#">
               <img className="w-6" src={assets.whatsapp_logo} alt="" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -7,70 +7,70 @@ const services = [
     id: 1,
     title: "01. Research & Strategy",
     description:
-      "We dive deep into your industry, analyze competitors, and understand your audience to create a solid game plan tailored for success.",
+      "We analyze market trends, user behavior, and competitors to create a strategic plan that drives results. Our data-driven approach ensures your brand stands out with a clear direction.",
     image: assets.service_1,
   },
   {
     id: 2,
     title: "02. Branding & Identity",
     description:
-      "A strong brand leaves a lasting impact. We craft unique brand identities, ensuring consistency across every touchpoint.",
+      "A strong brand is more than just a logo. We craft unique brand identities with eye-catching visuals and a consistent message that connects with your audience and builds trust.",
     image: assets.service_2,
   },
   {
     id: 3,
     title: "03. UI/UX Design",
     description:
-      "User experience matters. Our intuitive and visually stunning designs turn ideas into engaging digital products that people love.",
+      "We design seamless and engaging user experiences that blend aesthetics with functionality. Our UI/UX solutions focus on usability, ensuring an intuitive and enjoyable journey for users.",
     image: assets.service_3,
   },
   {
     id: 4,
     title: "04. Website Development",
     description:
-      "Responsive and modern websites that impress, delivering seamless functionality across all devices.",
+      "Your website is your online identity. We create responsive, high-performance websites that showcase your brand and provide a smooth user experience across all devices.",
     image: assets.service_4,
   },
   {
     id: 5,
     title: "05. Android App Development",
     description:
-      "Intuitive, feature-rich mobile applications for Android users, enhancing the mobile experience.",
+      "We develop feature-rich Android apps that are fast, secure, and user-friendly. Whether it’s a business app or a creative solution, we bring your ideas to life with precision.",
     image: assets.service_5,
   },
   {
     id: 6,
-    title: "06. Digital Marketing",
+    title: "06. iSO App Development",
     description:
-      "We execute powerful marketing strategies to drive traffic, increase engagement, and scale your brand.",
-    image: assets.service_6,
+      "Our iOS apps are built for performance, elegance, and seamless functionality. We ensure your app meets Apple’s high standards while delivering an engaging user experience.",
+    image: assets.service_8,
   },
   {
     id: 7,
-    title: "07. Personal Assistant Services",
+    title: "07. Digital Marketing",
     description:
-      "We offer personal assistant services to help you manage tasks and streamline your workflow.",
-    image: assets.service_7,
+      "We help you grow with targeted marketing strategies, including SEO, social media, and paid ads. Our goal is to increase brand visibility and drive real, measurable results.",
+    image: assets.service_6,
   },
   {
     id: 8,
-    title: "08. Launch & Beyond",
+    title: "08. Personal Assistant Services",
     description:
-      "Your success is our priority. We ensure a smooth launch and provide ongoing support to help your business grow effortlessly.",
-    image: assets.service_8,
+      "Stay focused on what matters while we handle your tasks. From scheduling to email management, our personal assistant services keep your workflow smooth and organized.",
+    image: assets.service_7,
   },
 ];
 
 const WhatWeDo = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [currentImage, setCurrentImage] = useState(assets.service_1); // Store the current image
+  const [currentImage, setCurrentImage] = useState(assets.service_1);
 
   const toggleDropdown = (id, image) => {
     if (openDropdown === id) {
-      setOpenDropdown(null); // Close dropdown if already open
+      setOpenDropdown(null);
     } else {
-      setOpenDropdown(id); // Open the clicked dropdown
-      setCurrentImage(image); // Set the current image to the selected service's image
+      setOpenDropdown(id);
+      setCurrentImage(image); 
     }
   };
 

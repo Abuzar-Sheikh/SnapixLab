@@ -59,7 +59,9 @@ const ProjManage = () => {
           <p className="mt-2 font-[#E6E6E6]">
             Our experienced project management team ensures that your projects
             are delivered on time, within budget, and according to your
-            specifications.
+            specifications. We follow industry-standard methodologies and employ
+            effective communication and collaboration tools to keep you informed
+            throughout the development process.
           </p>
           <div className="sm:my-[40px] my-[20px] w-[280px] text-sm px-2 py-2 bg-[#262626] rounded text-white">
             Our project management services include:

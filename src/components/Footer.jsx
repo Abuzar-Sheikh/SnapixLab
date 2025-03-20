@@ -73,7 +73,7 @@ const Footer = () => {
               />
             </a>
 
-            <a href="https://wa.me/923404816832">
+            <a href="https://wa.me/923129557718">
               <img
                 className="w-8 rounded bg-gradient-to-b from-[#242424] to-transparent p-[4px]"
                 src={whatsapp_logo}
@@ -100,14 +100,14 @@ const Footer = () => {
             className="flex items-center gap-2 hover:text-gray-400"
           >
             <img src={mail} alt="Email" className="h-5" />
-            hello@squareup.com
+            snapixlab.official@gmail.com
           </a>
           <a
             href="tel:+91918132309"
             className="flex items-center gap-2 hover:text-gray-400"
           >
             <img src={phone} alt="Phone" className="h-5" />
-            +91 91813 23 2309
+            +923129557718
           </a>
         </div>
         <div className="m-auto text-center">
