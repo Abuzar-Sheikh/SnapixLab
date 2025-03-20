@@ -21,58 +21,44 @@ const Contact = () => {
                 us, and let's start creating something amazing together.
               </p>
             </div>
-
-            {/* Social Media Icons */}
-            {/* <div className="hidden md:flex space-x-4">
-              <a href="https://www.instagram.com/snapixlab?igsh=MWJwdWNvNzBvMjFzMA==">
-                <img className="w-6" src={assets.instagram_logo} alt="" />
-              </a>
-              <a href="https://www.linkedin.com/company/snapix-lab/">
-                <img className="w-6" src={assets.linkedin_logo} alt="" />
-              </a>
-              <a href="https://www.facebook.com/share/151JkB4fwo/">
-                <img className="w-6" src={assets.facebook_logo} alt="" />
-              </a>
-              <a href="https://www.behance.net/snapixlab">
-                <img className="w-6" src={assets.behance_logo} alt="" />
-              </a>
-              <a href="https://wa.me/923404816832">
-                <img className="w-6" src={assets.whatsapp_logo} alt="" />
-              </a>
-            </div> */}
           </div>
 
           {/* --------------------------------------Right Section - Contact Form-------------------------------------- */}
           <div className="flex flex-col justify-center p-6 lg:p-10 rounded-xl shadow-lg bg-[#262626]/50 backdrop-blur-[10px]">
             <h2 className="text-2xl text-white mb-6">Contact Us</h2>
             <form
-              method="POST"
               action="https://formspree.io/f/myzekvqo"
+              method="POST"
               className="space-y-4"
             >
               <input
                 type="text"
+                name="name"
                 placeholder="Jane Smith"
                 className="w-full py-3 px-4 bg-[#BBBBBB]/15 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
               <input
                 type="email"
+                name="email"
                 placeholder="jane@framer.com"
                 className="w-full py-3 px-4 bg-[#BBBBBB]/15 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
               <div className="flex space-x-4">
                 <input
                   type="text"
+                  name="budget"
                   placeholder="Budget"
                   className="w-1/2 py-3 px-4 bg-[#BBBBBB]/15 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
                 <input
                   type="text"
+                  name="services"
                   placeholder="Services"
                   className="w-1/2 py-3 px-4 bg-[#BBBBBB]/15 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
               </div>
               <textarea
+                name="new design"
                 placeholder="New Design.."
                 rows="4"
                 className="w-full py-3 px-4 bg-[#BBBBBB]/15 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
@@ -82,25 +68,6 @@ const Contact = () => {
               </button>
             </form>
           </div>
-
-          {/* -------------------------------------- Social Media icons for Sm Screens -------------------------------------- */}
-          {/* <div className="flex md:hidden space-x-4">
-            <a href="#">
-              <img className="w-6" src={assets.instagram_logo} alt="" />
-            </a>
-            <a href="#">
-              <img className="w-6" src={assets.linkedin_logo} alt="" />
-            </a>
-            <a href="#">
-              <img className="w-6" src={assets.facebook_logo} alt="" />
-            </a>
-            <a href="#">
-              <img className="w-6" src={assets.behance_logo} alt="" />
-            </a>
-            <a href="#">
-              <img className="w-6" src={assets.whatsapp_logo} alt="" />
-            </a>
-          </div> */}
         </div>
       </div>
     </div>

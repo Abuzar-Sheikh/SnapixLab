@@ -107,8 +107,8 @@ const Contact = () => {
 
         <div className="sm:pt-[80px] pt-[20px] mx-[20px] lg:mx-[200px] pb-[20px] md:p-[60px] border border-[#262626] border-[0.75px]">
           <form
-            method="POST"
             action="https://formspree.io/f/myzekvqo"
+            method="POST"
             className="space-y-[30px]"
           >
             {/* Full Name and Email */}
@@ -118,6 +118,7 @@ const Contact = () => {
                   Full Name
                 </label>
                 <input
+                  name="name"
                   type="text"
                   placeholder="Type here"
                   className="w-full py-3 rounded-md border-[#98989A]/30 border-b-[0.75px] bg-transparent text-[#656567] text-[13.5px] outline-none"
@@ -128,6 +129,7 @@ const Contact = () => {
                   Email
                 </label>
                 <input
+                  name="email"
                   type="email"
                   placeholder="Type here"
                   className="w-full py-3 rounded-md border-[#98989A]/30 border-b-[0.75px] bg-transparent text-[#656567] text-[13.5px] outline-none"
@@ -143,6 +145,7 @@ const Contact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
                 <label className="flex items-center space-x-3">
                   <input
+                    name="design service"
                     type="checkbox"
                     className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
@@ -150,6 +153,7 @@ const Contact = () => {
                 </label>
                 <label className="flex items-center space-x-3">
                   <input
+                    name="marketting service"
                     type="checkbox"
                     className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
@@ -157,6 +161,7 @@ const Contact = () => {
                 </label>
                 <label className="flex items-center space-x-3">
                   <input
+                    name="developement service"
                     type="checkbox"
                     className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
@@ -164,6 +169,7 @@ const Contact = () => {
                 </label>
                 <label className="flex items-center space-x-3">
                   <input
+                    name="others"
                     type="checkbox"
                     className="w-[20px] h-[20px] appearance-none bg-[#333333] border-[#98989A]/40 border-[0.75px] rounded"
                   />
