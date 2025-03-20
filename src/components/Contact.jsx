@@ -2,6 +2,31 @@ import React from "react";
 import { assets } from "../assets/assets";
 
 const Contact = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission
+    const form = e.target;
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Successful submission, navigate to your page
+        navigate("/projects");
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("There was an error!", error);
+    }
+  };
   return (
     <div className="my-[20px] sm:my-[40px] flex justify-center items-center p-4">
       <div

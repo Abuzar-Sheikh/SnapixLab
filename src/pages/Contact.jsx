@@ -38,27 +38,34 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
 
-    // Append the slider values
+    // Append slider values and checkbox states to FormData
     data.append("minBudget", budget[0]);
     data.append("maxBudget", budget[1]);
+    data.append("designService", formData.designService ? "Yes" : "No");
+    data.append("marketingService", formData.marketingService ? "Yes" : "No");
+    data.append(
+      "developmentService",
+      formData.developmentService ? "Yes" : "No"
+    );
+    data.append("others", formData.others ? "Yes" : "No");
 
-    fetch("https://formspree.io/f/myzekvqo", {
-      method: "POST",
-      body: data,
-    })
-      .then((response) => {
-        if (response.ok) {
-          navigate("/thank-you");
-        } else {
-          console.error("Form submission failed");
-        }
-      })
-      .catch((error) => console.error("Error:", error));
+    try {
+      const response = await fetch("https://formspree.io/f/myzekvqo", {
+        method: "POST",
+        body: data,
+        mode: "no-cors", // This bypasses the CORS issue
+      });
+
+      // Since "no-cors" doesn't return a response, directly navigate to thank-you
+      navigate("/");
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const faqData = [
@@ -147,7 +154,12 @@ const Contact = () => {
         </div>
 
         <div className="sm:pt-[80px] pt-[20px] mx-[20px] lg:mx-[200px] pb-[20px] md:p-[60px] border border-[#262626] border-[0.75px]">
-          <form onSubmit={handleSubmit} className="space-y-[30px]">
+          <form
+            action="https://formspree.io/f/xldjdbnn"
+            method="POST"
+            onSubmit={handleSubmit}
+            className="space-y-[30px]"
+          >
             {/* Full Name and Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
               <div className="bg-[#262626] border border-[#98989A]/30 border-[0.75px] rounded px-[30px] py-[18px] gap-[15px]">
@@ -156,6 +168,7 @@ const Contact = () => {
                 </label>
                 <input
                   name="name"
+                  required
                   type="text"
                   placeholder="Type here"
                   className="w-full py-3 rounded-md border-[#98989A]/30 border-b-[0.75px] bg-transparent text-[#656567] text-[13.5px] outline-none"
@@ -167,6 +180,7 @@ const Contact = () => {
                 </label>
                 <input
                   name="email"
+                  required
                   type="email"
                   placeholder="Type here"
                   className="w-full py-3 rounded-md border-[#98989A]/30 border-b-[0.75px] bg-transparent text-[#656567] text-[13.5px] outline-none"
@@ -273,6 +287,7 @@ const Contact = () => {
               </label>
               <input
                 name="message"
+                required
                 type="text"
                 placeholder="Type here"
                 className="w-full py-3 rounded-md border-[#98989A]/30 border-b-[0.75px] bg-transparent text-[#656567] text-[13.5px] outline-none"
